@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/image/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" class="btn-wallet">
+            <span class="status"></span>
+            <span class="address">0xnic3w4ll3t...adv987</span>
+          </button>
+          <span class="icon-light" onclick="toggleTheme()">
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256,144c-61.75,0-112,50.25-112,112s50.25,112,112,112s112-50.25,112-112S317.75,144,256,144z M256,336 c-44.188,0-80-35.812-80-80c0-44.188,35.812-80,80-80c44.188,0,80,35.812,80,80C336,300.188,300.188,336,256,336z M256,112    c8.833,0,16-7.167,16-16V64c0-8.833-7.167-16-16-16s-16,7.167-16,16v32C240,104.833,247.167,112,256,112z M256,400    c-8.833,0-16,7.167-16,16v32c0,8.833,7.167,16,16,16s16-7.167,16-16v-32C272,407.167,264.833,400,256,400z M380.438,154.167    l22.625-22.625c6.25-6.25,6.25-16.375,0-22.625s-16.375-6.25-22.625,0l-22.625,22.625c-6.25,6.25-6.25,16.375,0,22.625    S374.188,160.417,380.438,154.167z M131.562,357.834l-22.625,22.625c-6.25,6.249-6.25,16.374,0,22.624s16.375,6.25,22.625,0    l22.625-22.624c6.25-6.271,6.25-16.376,0-22.625C147.938,351.583,137.812,351.562,131.562,357.834z M112,256    c0-8.833-7.167-16-16-16H64c-8.833,0-16,7.167-16,16s7.167,16,16,16h32C104.833,272,112,264.833,112,256z M448,240h-32    c-8.833,0-16,7.167-16,16s7.167,16,16,16h32c8.833,0,16-7.167,16-16S456.833,240,448,240z M131.541,154.167    c6.251,6.25,16.376,6.25,22.625,0c6.251-6.25,6.251-16.375,0-22.625l-22.625-22.625c-6.25-6.25-16.374-6.25-22.625,0    c-6.25,6.25-6.25,16.375,0,22.625L131.541,154.167z M380.459,357.812c-6.271-6.25-16.376-6.25-22.625,0    c-6.251,6.25-6.271,16.375,0,22.625l22.625,22.625c6.249,6.25,16.374,6.25,22.624,0s6.25-16.375,0-22.625L380.459,357.812z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <span class="icon-dark" onclick="toggleTheme()">
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M349.852,343.15c-49.875,49.916-131.083,49.916-181,0c-49.916-49.918-49.916-131.125,0-181.021  c13.209-13.187,29.312-23.25,47.832-29.812c5.834-2.042,12.293-0.562,16.625,3.792c4.376,4.375,5.855,10.833,3.793,16.625  c-12.542,35.375-4,73.666,22.25,99.917c26.209,26.228,64.5,34.75,99.916,22.25c5.792-2.062,12.271-0.582,16.625,3.793  c4.376,4.332,5.834,10.812,3.771,16.625C373.143,313.838,363.06,329.941,349.852,343.15z M191.477,184.754  c-37.438,37.438-37.438,98.354,0,135.771c40,40.021,108.125,36.416,143-8.168c-35.959,2.25-71.375-10.729-97.75-37.084  c-26.375-26.354-39.333-61.771-37.084-97.729C196.769,179.796,194.039,182.192,191.477,184.754z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div class="dropdown">
+            <span class="icon-dropdown">
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 18 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.875 2.5C10.875 1.48438 10.0156 0.625 9 0.625C7.94531 0.625 7.125 1.48438 7.125 2.5C7.125 3.55469 7.94531 4.375 9 4.375C10.0156 4.375 10.875 3.55469 10.875 2.5ZM15.5625 0.625C14.5078 0.625 13.6875 1.48438 13.6875 2.5C13.6875 3.55469 14.5078 4.375 15.5625 4.375C16.5781 4.375 17.4375 3.55469 17.4375 2.5C17.4375 1.48438 16.5781 0.625 15.5625 0.625ZM2.4375 0.625C1.38281 0.625 0.5625 1.48438 0.5625 2.5C0.5625 3.55469 1.38281 4.375 2.4375 4.375C3.45312 4.375 4.3125 3.55469 4.3125 2.5C4.3125 1.48438 3.45312 0.625 2.4375 0.625Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <div class="dropdown-content" style="left: 0">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="mask"></div>
+
+      <div class="hiro card">
+          <h2 class="primary">TOKEN HOLDERS REWARDS</h2>
+          <div class="reward">
+            <div class="reward-section">
+              <p>Current BUSD rewards</p>
+              <p class="price">$12.45</p>
+            </div>
+            <div class="reward-section">
+              <p>All rewards paid to you</p>
+              <p class="price">$123.45</p>
+            </div>
+          </div>
+          <div class="claim-rewards">
+            <button class="btn-primary"><span> CLAIM REWARDS </span></button>
+          </div>
+        <div class="hiro-footer">
+          <div>
+            <div class="price">$12343.73</div>
+            <div class="extra">All reward paid to holders</div>
+          </div>
+          <div>
+            <div class="price">$543.25</div>
+            <div class="extra">Current BUSD balance</div>
+          </div>
+          <div>
+            <button class="btn-primary"><span> BUY MORE HIRO </span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="nft card">
+        <div class="nft_mask"></div>
+        <h2 class="nft">NFT HOLDERS REWARDS</h2>
+        <div class="reward">
+          <div class="reward-section">
+            <p>Current BNB rewards</p>
+            <p class="price">0.24 BNB</p>
+          </div>
+        </div>
+        <div class="nft-footer">
+          <div>
+            <div class="price">10 of 260 (3.8%)</div>
+            <div class="extra">Your NFTs total</div>
+          </div>
+          <div>
+            <div class="price">3.4 BNB</div>
+            <div class="extra">Rewards wallet amount</div>
+          </div>
+          <div>
+            <button class="btn-primary"><span> BUY MORE NFTS </span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap');
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+body {
+  --COLOR-TOPBAR-BG: #00001B;
+  --COLOR-LIGHT-BLUE: #50B8E2;
+  --COLOR-DARKER-BLUE: #0D4D8B;
+  --COLOR-GOLDEN-ROD: #DAA520;
+  --COLOR-CARD-BG: #0F254ECC;
+  --COLOR-WHITE: #FFFFFF;
+  --COLOR-STATUS: #1594D3;
+  --FONT-SUBTITLE-SIZE: 24px;
+  --COLOR-HIRO-TITLE:#50B8E2;
+  --COLOR-HIRO:#0F254E;
+  --COLOR-BTN-PRIMARY:#50B8E2;
+  --COLOR-PRICE:#ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100vh;
+}
+
+body.light {
+  --COLOR-TOPBAR-BG: #FFFFFF;
+  --COLOR-WHITE: #0B1831;
+  --COLOR-HIRO:#ffffff;
+  --COLOR-HIRO-TITLE:#0D4D8B;
+  --COLOR-PRICE:#000000;
+}
+
+h2{
+  font-size: var(--FONT-SUBTITLE-SIZE);
+  font-weight: 400;
+}
+
+h2.primary {
+  color: var(--COLOR-HIRO-TITLE);
+}
+
+h2.nft {
+  color: var(--COLOR-GOLDEN-ROD);
+}
+
+h2.warning {
+  color: var(--COLOR-HIRO-TITLE);
+}
+
+button {
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 16px;
+}
+
+.logo a {
+  display: flex;
+}
+
+.topbar {
+  background-color: var(--COLOR-TOPBAR-BG);
+  padding: 16px 0;
+}
+
+.light .topbar {
+  border-bottom: 1px solid #CECECE;
+}
+
+.topbar-container {
+  display: flex;
+  flex-flow: row;
+  margin: 0 auto;
+  max-width: 600px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-wallet {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 0;
+  background-color: var(--COLOR-DARKER-BLUE);
+}
+
+.status {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 17px;
+  display: inline-block;
+  background-color: var(--COLOR-STATUS);
+}
+
+.topbar-actions {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.address {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.icon-light, .icon-dark {
+  margin: 0 16px;
+  color: var(--COLOR-WHITE);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color ease .5s;
+}
+
+.icon-light:hover, .icon-dark:hover {
+  color: var(--COLOR-GOLDEN-ROD);
+}
+
+.icon-dark {
+  display: none;
+}
+
+.light .icon-dark {
+  display: flex;
+}
+
+.light .icon-light {
+  display: none;
+}
+
+.icon-dropdown {
+  display: flex;
+  height: 46px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 6px;
+  color: var(--COLOR-WHITE);
+  border: 1px solid transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:white;
+}
+
+.content {
+  flex: 1;
+  background-color: var(--COLOR-TOPBAR-BG);
+  position: relative;
+}
+
+.mask {
+  background-image: url("../image/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hiro {
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-top: 48px;
+  max-width: 600px;
+  align-items: center;
+  border-radius: 12px;
+  background-color: var(--COLOR-HIRO);
+  opacity: 0.999;
+
+} 
+
+.card {
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
+}
+
+/* .hiro-mask {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  
+} */
+
+.hiro > h2 {
+  margin-top: 32px;
+}
+
+.reward {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reward-section {
+  width: 100%;
+  text-align: center;
+}
+
+.reward-section p {
+  color: lightgrey;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.reward-section .price {
+  font-size: 32px;
+  color: var(--COLOR-PRICE);
+  margin-top: 8px;
+}
+
+.hiro .claim-rewards {
+  padding: 25px 0px;
+}
+
+.hiro-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #50B8E2;
+  padding: 15px 30px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.hiro-footer>div .price {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.hiro-footer>div .extra {
+  font-size: 14px;
+  color: grey;
+}
+
+.btn-primary {
+  background-color: var(--COLOR-BTN-PRIMARY);
+  color: #000;
+  padding: 13px 15px;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+.hiro .claim-rewards .btn-primary {
+  border: none;
+}
+
+.nft {
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-top: 48px;
+  max-width: 600px;
+  align-items: center;
+  border-radius: 12px;
+  background-color: var(--COLOR-HIRO);
+  opacity: 0.8;
+} 
+
+
+.nft > h2 {
+  margin-top: 32px;
+}
+
+.nft .reward .price {
+  margin-top: 0px;
+}
+
+.nft .claim-rewards {
+  padding: 25px 0px;
+}
+
+.nft-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--COLOR-GOLDEN-ROD);
+  padding: 15px 30px;
+  margin-top: 32px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.nft-footer>div .price {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.nft-footer>div .extra {
+  font-size: 14px;
+  color: grey;
+}
+
+.nft .btn-primary {
+  background-color: var(--COLOR-GOLDEN-ROD);
+  color: #000;
+  padding: 13px 15px;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+.nft .claim-rewards .btn-primary {
+  border: none;
+}
