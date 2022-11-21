@@ -16,9 +16,11 @@
           </a>
         </div>
         <div class="topbar-actions">
-          <button type="button" class="btn-wallet">
+          <button type="button" class="btn-wallet" onclick="showAddress()">
             <span class="status"></span>
             <span class="address">0xnic3w4ll3t...adv987</span>
+
+            <span id="wallet" class="address">0xnic3w4ll3t...adv987</span>
           </button>
           <span class="icon-light" onclick="toggleTheme()">
             <svg
@@ -61,7 +63,7 @@
                 />
               </svg>
             </span>
-            <div class="dropdown-content" style="left: 0">
+            <div class="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
@@ -73,56 +75,68 @@
     <div class="content">
       <div class="mask"></div>
 
-      <div class="hiro card">
+      <div class="main-content">
+        <div class="hiro card">
           <h2 class="primary">TOKEN HOLDERS REWARDS</h2>
           <div class="reward">
             <div class="reward-section">
-              <p>Current BUSD rewards</p>
-              <p class="price">$12.45</p>
+              <p class="pricetitle">Current BUSD rewards</p>
+              <div>
+                <p class="price">$12.45</p>
+              </div>
             </div>
             <div class="reward-section">
-              <p>All rewards paid to you</p>
-              <p class="price">$123.45</p>
+              <p class="pricetitle">All rewards paid to you</p>
+              <div>
+                <p class="price">$123.45</p>
+              </div>
             </div>
           </div>
           <div class="claim-rewards">
             <button class="btn-primary"><span> CLAIM REWARDS </span></button>
           </div>
-        <div class="hiro-footer">
-          <div>
-            <div class="price">$12343.73</div>
-            <div class="extra">All reward paid to holders</div>
-          </div>
-          <div>
-            <div class="price">$543.25</div>
-            <div class="extra">Current BUSD balance</div>
-          </div>
-          <div>
-            <button class="btn-primary"><span> BUY MORE HIRO </span></button>
+          <div class="hiro-footer footer">
+            <div class="footer-text">
+              <div class="footerprice">$12343.73</div>
+              <div class="extra">All reward paid to holders</div>
+            </div>
+            <div class="middle footer-text">
+              <div class="footerprice">$543.25</div>
+              <div class="extra">Current BUSD balance</div>
+            </div>
+            <div>
+              <button class="btn-buy hiro-btn">
+                <span> BUY MORE HIRO </span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="nft card">
-        <div class="nft_mask"></div>
-        <h2 class="nft">NFT HOLDERS REWARDS</h2>
-        <div class="reward">
-          <div class="reward-section">
-            <p>Current BNB rewards</p>
-            <p class="price">0.24 BNB</p>
+        <div class="nft card">
+          <div class="nft_mask"></div>
+          <h2 class="nft">NFT HOLDERS REWARDS</h2>
+          <div class="reward">
+            <div class="reward-section">
+              <p class="nft-pricetitle">Current BNB rewards</p>
+              <div>
+                <p class="price">0.24 BNB</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="nft-footer">
-          <div>
-            <div class="price">10 of 260 (3.8%)</div>
-            <div class="extra">Your NFTs total</div>
-          </div>
-          <div>
-            <div class="price">3.4 BNB</div>
-            <div class="extra">Rewards wallet amount</div>
-          </div>
-          <div>
-            <button class="btn-primary"><span> BUY MORE NFTS </span></button>
+          <div class="nft-footer footer">
+            <div class="footer-text">
+              <div class="footerprice">10 of 260 (3.8%)</div>
+              <div class="extra">Your NFTs total</div>
+            </div>
+            <div class="middle footer-text">
+              <div class="footerprice">3.4 BNB</div>
+              <div class="extra">Rewards wallet amount</div>
+            </div>
+            <div>
+              <button class="btn-buy nft-btn">
+                <span> BUY MORE NFTS </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
