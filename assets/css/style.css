@@ -23,6 +23,7 @@ body {
   --COLOR-HIRO-TITLE:#50B8E2;
   --COLOR-BTN-PRIMARY:#50B8E2;
   --COLOR-PRICE:#ffffff;
+  --COlOR-PRICELIST:#ffffff80;
   margin: 0;
   padding: 0;
   display: flex;
@@ -37,6 +38,7 @@ body.light {
   --COLOR-WHITE: #0B1831;
   --COLOR-HIRO-TITLE:#0D4D8B;
   --COLOR-PRICE:#000000;
+  --COlOR-PRICELIST:#0B183180;
 }
 
 h2{
@@ -274,7 +276,7 @@ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
 }
 
 .pricetitle {
-  color: #ffffff80;
+  color: var(--COlOR-PRICELIST);
   font-weight: 400;
   font-size: 16px;
   line-height: 22px ;
