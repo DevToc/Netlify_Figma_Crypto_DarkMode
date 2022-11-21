@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,600,700&amp;lang=en');
 
 * {
@@ -10,7 +9,6 @@
 
 body {
   --COLOR-TOPBAR-BG: #00001B;
-  --COLOR-LIGHT-BLUE: #50B8E2;
   --COLOR-DARKER-BLUE: #0D4D8B;
   --COLOR-GOLDEN-ROD: #DAA520;
   --COLOR-CARD-BG: #0F254ECC;
@@ -39,8 +37,6 @@ body.light {
   --COLOR-LIGHT-BLUE:#0D4D8B;
   --COLOR-PRICE:#000000;
   --COlOR-PRICELIST:#0B183180;
-  /* --COLOR-BTN-PRIMARY-HOVER:#F5F5F5; */
-  /* --COLOR-PRIMARY-HOVER:#ffffff; */
 
 }
 
@@ -48,14 +44,19 @@ h2{
   font-size: var(--FONT-SUBTITLE-SIZE);
   font-weight: 400;
   text-align: center;
+  line-height: 33px;
 }
 
 h2.primary {
   color: var(--COLOR-LIGHT-BLUE);
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 h2.nft {
   color: var(--COLOR-GOLDEN-ROD);
+  text-align: center;
 }
 
 h2.warning {
@@ -96,6 +97,7 @@ p {
   max-width: 600px;
   width: 600px;
   height: 49px;
+  align-items: center;
 }
 
 .btn-wallet {
@@ -114,8 +116,10 @@ p {
   right: 0;
   background-color:var( --COLOR-BTN-PRIMARY);
   color:black;
-  padding: 10px;
+  padding: 5px;
   z-index: 2;
+  border-radius: 10px;
+  width: auto;
 
 }
 
@@ -214,52 +218,56 @@ p {
 }
 
 .content {
-  flex: 1;
-  background-color: var(--COLOR-TOPBAR-BG);
   position: relative;
+  height: 100%;
+  background-color: var(--COLOR-TOPBAR-BG);
 }
 
-.mask {
-  background-image: url("../image/back.png");
-  background-repeat: no-repeat;
+.content::before {    
+  content: "";
+  background-image: url('../image/back.png');
   background-size: cover;
-  opacity: 0.25;
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+ 
 }
+
+
 
 .main-content {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .hiro {
   display: flex;
   flex-flow: column;
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 24px;
   max-width: 600px;
   align-items: center;
   border-radius: 12px;
   background-color: var(--COLOR-CARD-BG);
   height: 323px;
+  padding-top: 32px;
 
 } 
 
 .card {
-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
 }
 
-
-.hiro > h2 {
-  margin-top: 32px;
-}
 
 .reward {
 
@@ -398,95 +406,101 @@ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
   align-items: center;
   border-radius: 12px;
   background-color: var(--COLOR-CARD-BG);
-  opacity: 0.999;
   height: 259px;
+  padding-top: 32px;
 } 
 
-
-.nft > h2 {
-  margin-top: 32px;
+.gold {
+  color: var(--COLOR-GOLDEN-ROD);
+  text-align: center;
 }
 
 
 .nft .claim-rewards {
   padding: 25px 0px;
 }
-/* 
-.nft-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background-color: var(--COLOR-GOLDEN-ROD);
-  padding: 15px 30px;
-  margin-top: 32px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-} */
+
 .nft-footer {
   background-color: var(--COLOR-GOLDEN-ROD);
 }
 
-/* .nft-footer>div .price {
-  text-align: center;
-  color: black;
-  font-size: 20px;
-}
-
-.nft-footer>div .extra {
-  font-size: 14px;
-  color: grey;
-  text-align: center;
-}
-
-.nft .btn-primary {
-  background-color: var(--COLOR-GOLDEN-ROD);
-  color: #000;
-  padding: 13px 15px;
-  font-size: 16px;
-  border: 1px solid black;
-}
-
-.nft .claim-rewards .btn-primary {
-  border: none;
-} */
 
 
 @media screen and (max-width: 600px) {
-  .address {
+ 
+   .address{
     display: none;
   }
-  .logo{
-    margin-right: 16px;
-  
+  .topbar{
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-
-  .logo a {
-    display: flex;
-  }
-
-  .logo a img {
-    width: 90%;
-  }
-  .topbar-actions {
-    margin-left: 5px;
-    margin-right: 20px;
-  }
-  .dropdown-content{
-    left: -120px;
-  }
-  .footer {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .middle {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .card{
-    margin-left:2rem;
-    margin-right:2rem;
+  .topbar-container {
+    margin-left: 10%;
+    margin-right: 10%;
     
   }
+  .topbar{
+    width: 100%;
+  }
+  .topbar-actions{
+    width: 30vw;
+    justify-content: end;
+    align-items: center;
+  }
+  .btn-wallet{
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+  
+  }
+  .status {
+    width: 16px;
+    height: 16px;
+  }
+  .status {
+    margin:auto;
+  }
+  .card {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    padding-top: 24px;
+    
+  }
+  .hiro {
+    margin-top: 0px;
+  }
+  .reward {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricetitle{
+    width: 100%;
+  }
+  .footer{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .footer > div {
+    width: auto;
+  }
+  .gold {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #logo {
+    width: 45vw;
+    height: 10vw;
+  }
+  .dropdown-content {
+    left: -120px;
+  }
+ 
+
 }
