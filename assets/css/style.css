@@ -8,22 +8,22 @@
   padding: 0px;
 }
 
-
-
-
 body {
   --COLOR-TOPBAR-BG: #00001B;
   --COLOR-LIGHT-BLUE: #50B8E2;
   --COLOR-DARKER-BLUE: #0D4D8B;
   --COLOR-GOLDEN-ROD: #DAA520;
   --COLOR-CARD-BG: #0F254ECC;
+  --COLOR-BTN-BUY:#0f2542;
   --COLOR-WHITE: #FFFFFF;
   --COLOR-STATUS: #1594D3;
   --FONT-SUBTITLE-SIZE: 24px;
-  --COLOR-HIRO-TITLE:#50B8E2;
+  --COLOR-LIGHT-BLUE:#50B8E2;
   --COLOR-BTN-PRIMARY:#50B8E2;
   --COLOR-PRICE:#ffffff;
   --COlOR-PRICELIST:#ffffff80;
+  --COLOR-BTN-PRIMARY-HOVER:#A8DCF0;
+  --COLOR-PRIMARY-HOVER:#0E1528;
   margin: 0;
   padding: 0;
   display: flex;
@@ -36,9 +36,12 @@ body.light {
   --COLOR-TOPBAR-BG: #FFFFFF;
   --COLOR-CARD-BG: #FFFFFF;
   --COLOR-WHITE: #0B1831;
-  --COLOR-HIRO-TITLE:#0D4D8B;
+  --COLOR-LIGHT-BLUE:#0D4D8B;
   --COLOR-PRICE:#000000;
   --COlOR-PRICELIST:#0B183180;
+  /* --COLOR-BTN-PRIMARY-HOVER:#F5F5F5; */
+  /* --COLOR-PRIMARY-HOVER:#ffffff; */
+
 }
 
 h2{
@@ -48,7 +51,7 @@ h2{
 }
 
 h2.primary {
-  color: var(--COLOR-HIRO-TITLE);
+  color: var(--COLOR-LIGHT-BLUE);
 }
 
 h2.nft {
@@ -56,7 +59,7 @@ h2.nft {
 }
 
 h2.warning {
-  color: var(--COLOR-HIRO-TITLE);
+  color: var(--COLOR-LIGHT-BLUE);
 }
 
 button {
@@ -187,7 +190,7 @@ p {
   display: none;
   position: absolute;
   left: 0;
-  background-color: #f9f9f9;
+  background-color: #50B8E2;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -200,14 +203,14 @@ p {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background-color: #A8DCF0;}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .dropdown:hover .dropbtn {
-  background-color:white;
+  background-color:#ffffff;
 }
 
 .content {
@@ -312,6 +315,10 @@ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
   font-size: 16px;
   width: 159px;
 }
+.btn-primary:hover{
+  background-color: var(--COLOR-BTN-PRIMARY-HOVER);
+  color:var(--COLOR-PRIMARY-HOVER);
+}
 
 .hiro .claim-rewards .btn-primary {
   border: none;
@@ -352,13 +359,18 @@ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);;
 }
 
 .btn-buy {
-  color: #0F254E;
-  border:1px solid #0F254E;
+  color: var( --COLOR-BTN-BUY);
+  border:1px solid var( --COLOR-BTN-BUY);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 158px;
   height: 48px;
+}
+
+.btn-buy:hover {
+  background-color: var( --COLOR-BTN-BUY);
+  color:#ffffff;
 }
 
 .hiro-btn {
