@@ -14,3 +14,14 @@ showAddress = () => {
 
     }
 }
+
+toggleMenu = () => {
+    document.getElementById('menucontent').classList.toggle('active')
+    // if(document.getElementById('menucontent').style.display=='block'){
+    //     document.getElementById('menucontent').style.display='none'
+    // }
+    // else {
+    //     document.getElementById('menucontent').style.display='block'
+
+    // }
+  }

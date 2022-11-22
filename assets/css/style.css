@@ -22,6 +22,7 @@ body {
   --COlOR-PRICELIST:#ffffff80;
   --COLOR-BTN-PRIMARY-HOVER:#A8DCF0;
   --COLOR-PRIMARY-HOVER:#0E1528;
+  --COLOR-DROPDOWN-PRIMARY:#50B8E2;
   margin: 0;
   padding: 0;
   display: flex;
@@ -38,7 +39,7 @@ body.light {
   --COLOR-LIGHT-BLUE:#0D4D8B;
   --COLOR-PRICE:#000000;
   --COlOR-PRICELIST:#0B183180;
-
+  --COLOR-DROPDOWN-PRIMARY:#A8DCF0;
 }
 
 h2{
@@ -192,27 +193,40 @@ p {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
+  position: fixed;
+  height: 100%;
+  top: 80px;
   left: 0;
-  background-color: #50B8E2;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  background-color:var(--COLOR-DROPDOWN-PRIMARY);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 2;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
 }
 
+.dropdown-content.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+  
 .dropdown-content a {
-  color: black;
+  text-align: center;
+  color:black;  
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border-bottom: 1px solid black;
+
 }
 
 .dropdown-content a:hover {background-color: #A8DCF0;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 .dropdown:hover .dropbtn {
   background-color:#ffffff;
@@ -501,7 +515,7 @@ p {
     height: 10vw;
   }
   .dropdown-content {
-    left: -120px;
+    top:70px;
   }
  
 
